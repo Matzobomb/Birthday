@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Colorful and Animated Birthday Greetings">
-    <meta name="keywords" content="birthday, greetings, animated, colorful">
+    <meta name="description" content="Animated Birthday Greetings">
+    <meta name="keywords" content="birthday, greetings, animated">
     <title>Animated Birthday Greetings</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #f6f6f6;
             color: #333;
             text-align: center;
@@ -17,10 +17,6 @@
 
         h1 {
             color: #ff4500;
-        }
-
-        p {
-            font-size: 18px;
         }
 
         form {
@@ -53,23 +49,15 @@
     </style>
     <script>
         function showMessageAndEmail() {
-            // Get the value of the 'name' parameter from the URL
             const urlParams = new URLSearchParams(window.location.search);
             const name = urlParams.get('name');
-
-            // Get the customized birthday message and email from the form
             const customMessage = document.getElementById('customMessage').value;
             const recipientEmail = document.getElementById('recipientEmail').value;
 
-            // Display the birthday message with the provided or default name and custom message
             const message = `Happy Birthday, ${name || 'Friend'}! ${customMessage || 'Best wishes for a fantastic year ahead! 🎉🎂'}`;
 
-            // Check if recipient's email is provided
             if (recipientEmail) {
-                // Generate a mailto link with the message and email
                 const mailtoLink = `mailto:${recipientEmail}?subject=Birthday Greetings&body=${encodeURIComponent(message)}`;
-
-                // Open the default email client with the mailto link
                 window.location.href = mailtoLink;
             }
         }
@@ -79,7 +67,6 @@
     <h1>Animated Birthday Greetings</h1>
     <p>Enter the recipient's email and customize your birthday message:</p>
 
-    <!-- Form for custom birthday message and recipient's email -->
     <form>
         <label for="recipientEmail">Recipient's Email:</label>
         <input type="email" id="recipientEmail" placeholder="Enter recipient's email" required>
@@ -91,6 +78,7 @@
     </form>
 </body>
 </html>
+
 
 
 
